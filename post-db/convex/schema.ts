@@ -7,6 +7,9 @@ import { v } from "convex/values";
 
 export default defineSchema(
   {
+    posts: defineTable({
+      content: v.string(),
+    }),
     documents: defineTable({
       fieldOne: v.string(),
       fieldTwo: v.object({
