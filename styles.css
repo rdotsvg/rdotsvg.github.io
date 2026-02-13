@@ -1,22 +1,71 @@
+@font-face {
+  font-family: 'ServerMono';
+  src: url('https://cdn.jsdelivr.net/gh/internet-development/www-server-mono@latest/public/fonts/ServerMono-Regular.woff2') format('woff2'),    /* Best compression, modern browsers */
+       url('https://cdn.jsdelivr.net/gh/internet-development/www-server-mono@latest/public/fonts/ServerMono-Regular.woff') format('woff'),      /* Good compression, wider support */
+       url('https://cdn.jsdelivr.net/gh/internet-development/www-server-mono@latest/public/fonts/ServerMono-Regular.otf') format('opentype');   /* Largest files, universal support */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ServerMono';
+  src: url('https://cdn.jsdelivr.net/gh/internet-development/www-server-mono@latest/public/fonts/ServerMono-RegularOblique.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/internet-development/www-server-mono@latest/public/fonts/ServerMono-RegularOblique.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/internet-development/www-server-mono@latest/public/fonts/ServerMono-RegularOblique.otf') format('opentype');
+  font-weight: normal;
+  font-style: oblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Host Grotesk';
+  src: url('/fonts/HostGrotesk-Medium.woff') format('woff'),
+       url('/fonts/HostGrotesk-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: medium;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Host Grotesk';
+  src: url('/fonts/HostGrotesk-MediumItalic.woff') format('woff'),
+       url('/fonts/HostGrotesk-MediumItalic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: medium;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Host Grotesk';
+  src: url('/fonts/HostGrotesk-Regular.woff') format('woff'),
+       url('/fonts/HostGrotesk-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
 :root {
     --grey: #828282;
     --white: #fff;
 }
+html, body {
+    height: 100%;
+}
+html {
+    display: table;
+    margin: auto;
+}
 body {
-    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
-    margin: 0 auto;
+    font-family: 'ServerMono', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
     padding: 18px;
-    color: var(--grey);
-    background-color: #ffffff;
-    font-size: 18px;
+    color: #ffffff;
+    background-color: #0a0a0a;
+    font-size: 20px;
+    letter-spacing: -1px;
     scrollbar-width: none;
-    font-weight: 500;
-    width: 80%;
-    max-width: 600px;
+    font-weight: 400;
+    width: 70%;
+    max-width: 400px;
     display: table-cell;
     vertical-align: middle;
+    text-transform: uppercase;
 }
-.d {
+a {
     color: #fff
 }
-.desc
