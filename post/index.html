@@ -6,7 +6,56 @@
     <link href="/styles.css" rel="stylesheet">
 </head>
 <body>
-    <form action="https://jovial-mockingbird-282.convex.site/" method="post"><textarea style="width: 200px; height: 150px;"></textarea>
-    <button type="submit">post</button></form>
+    <form id="postForm">
+        <textarea id="postContent" name="content" style="width: 200px; height: 150px;"></textarea>
+        <button id="postButton" type="submit">post</button>
+    </form>
+    <div id="feedback"></div>
+    <script>
+        const form = document.getElementById("postForm");
+        const textarea = document.getElementById("postContent");
+        const button = document.getElementById("postButton");
+        const feedback = document.getElementById("feedback");
+
+        const setFeedback = (message) => {
+            feedback.textContent = message;
+        };
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const content = textarea.value.trim();
+
+            if (!content) {
+                setFeedback("please enter a post.");
+                return;
+            }
+
+            button.disabled = true;
+            setFeedback("posting...");
+
+            try {
+                const response = await fetch("https://jovial-mockingbird-282.convex.site/post", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ content }),
+                });
+
+                if (!response.ok) {
+                    const errorMessage = await response.text();
+                    setFeedback(errorMessage || "error posting.");
+                    return;
+                }
+
+                textarea.value = "";
+                setFeedback("posted!");
+            } catch (error) {
+                setFeedback("error posting.");
+            } finally {
+                button.disabled = false;
+            }
+        });
+    </script>
 </body>
 </html>
