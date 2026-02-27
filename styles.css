@@ -41,8 +41,8 @@
   font-display: swap;
 }
 :root {
-    --grey: #828282;
-    --white: #fff;
+    --sub: #828282;
+    --main: #000000;
 }
 html, body {
     height: 100%;
@@ -52,20 +52,31 @@ html {
     margin: auto;
 }
 body {
-    font-family: 'ServerMono', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+    font-family: 'Host Grotesk', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
     padding: 18px;
-    color: #ffffff;
-    background-color: #0a0a0a;
+    color: #000000;
+    background-color: #ffffff;
     font-size: 20px;
-    letter-spacing: -1px;
     scrollbar-width: none;
     font-weight: 400;
     width: 70%;
     max-width: 400px;
     display: table-cell;
     vertical-align: middle;
-    text-transform: uppercase;
 }
 a {
-    color: #fff
+    color: #000000
+}
+.ftr {
+  font-size: 12px;
+  padding: 4px 7px;
+  border-radius: 7px;
+  background-color: #b8b8b8;
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 3px
+}
+.logo {
+  width: 12px;
+  height: 12px;
 }
